@@ -1,0 +1,201 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 24rpx;
+  border: 1px solid #ededf2;
+  margin: 10rpx 16rpx;
+  box-shadow: 2px 5rpx #f5f6f9;
+  border-radius: 20rpx;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.price {
+  margin-top: 4rpx;
+  color: #f44;
+  /* 红色 */
+  font-size: 28rpx;
+}
+
+.text-right {
+  border: 1rpx solid #c6e8ff;
+  width: 165rpx;
+  height: 50rpx;
+  box-sizing: border-box;
+  background-color: #c6e8ff;
+  text-align: center;
+  margin-right: -24rpx;
+  border-top-left-radius: 25rpx;
+  border-bottom-left-radius: 25rpx;
+}
+
+.text-right-text {
+  font-size: 28rpx;
+  color: #5da5fd;
+}
+
+.xuanze{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 28rpx;
+}
+
+.xuanze-text{
+  font-weight: 600;
+}
+.search{
+  margin-left: 20rpx;
+  width: 78%;
+  margin-right: 20rpx;
+}
+
+.itemlist{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20rpx;
+  width: 94%;
+  border: 2rpx solid #9fc6f2;
+  background-color: #f1f4ff;
+  border-radius: 20rpx;
+  justify-content: center;
+  padding: 10rpx;
+  overflow-y: auto; /* 超出部分滚动显示 */
+  max-height: calc(3 * 42px); /* 限制最多显示三行 */
+}
+.itemlist1{
+ width: 30%;
+ border: 1rpx solid #cecece;
+ margin: 10rpx;
+ border-radius: 10rpx;
+ text-align: center;
+ height: 50rpx;
+}
+
+.van-cell1111{
+  width: 94%;
+  margin: auto;
+  margin-top: 15rpx;
+  box-shadow: 2px 5rpx #f5f6f9;
+  border-radius: 20rpx;
+  border: 1px solid #ededf2
+}
+
+.van-cell1111-1{
+  display: flex;
+  justify-content: space-between;
+}
+.qunliao{
+  display: flex;
+}
+.qunliao-1{
+  display: flex;
+  border-radius: 20rpx;
+  width: 140rpx;
+  height: 50rpx;
+  background-color:#a4e0ff ;
+  font-size: 24rpx;
+  text-align: center;
+  margin-left: 20rpx;
+  color: #63a7ff;
+}
+
+.qunliao-1-icon{
+  display: flex;
+  margin: auto;
+}
+.qunliao-1-icon-01{
+  color:#969799 ;
+}
+
+.xinxi{
+  width: 94%;
+  margin: 20rpx auto;
+  height: 70rpx;
+  background-color: #5da5fd;
+  border-radius: 20rpx;
+  border: 1rpx solid #5da5fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.zhangdan{
+  display: flex;
+  margin: 10rpx;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #ededf2;
+}
+
+.zhangdan .view11{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: .25;
+}
+
+.zhangdan .view11 text{
+  margin: 10rpx;
+}
+
+.zhangdan .view11 text:nth-child(1){
+  color: red;
+}
+
+.footer{
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.fandian{
+  display: flex;
+}
+
+.view22 {
+  margin: 10rpx;
+}
+.baobei{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20rpx;
+}
+.baobei text{
+  margin:10rpx 0 ;
+}
+
+.zhangdan .view22 .fandian111{
+  color: black;
+}
+.jifen{
+  color: #8dc1f7;
+}
+.itemlist1.active {
+  background-color: #1890ff; /* 选中状态的颜色 */
+  color: #fff;
+}

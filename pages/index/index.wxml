@@ -1,0 +1,130 @@
+<view class="header">
+  <!-- 左侧：头像 + 文本信息 -->
+  <view class="left-section">
+    <image class="avatar" src="/utils/images/崇宫真那.png" mode="aspectFill" />
+    <view class="text-info">
+      <text class="username">blue</text>
+      <text>单价：<text class="price">¥3.00</text></text>
+    </view>
+  </view>
+  <!-- 右侧：接单人按钮 -->
+  <view class="text-right">
+    <text class="text-right-text">接单人</text>
+  </view>
+</view>
+
+<view class="xuanze">
+  <text class="xuanze-text">选择项目</text>
+  <van-search value="{{ value }}" placeholder="可输入项目名称查询" class="search" shape="round" />
+</view>
+
+<view class="itemlist">
+  <view class="itemlist1 {{activeIndex === index ? 'active' : ''}}" wx:for="{{list}}" wx:key="index" bindtap="handleClick" data-value="{{item}}" data-index="{{index}}">
+    {{ item }}
+  </view>
+  <van-toast id="van-toast" />
+</view>
+
+<view class="van-cell1111">
+
+  <van-cell-group inset>
+    <van-cell 
+    is-link 
+    value="{{ selectedTime || '请选择接单时间' }}"
+    bind:click="onOpenPicker"
+  >
+      <view slot="title" class="van-cell1111-1">
+    <text>接单时间</text>
+  </view>
+  </van-cell>
+
+<!-- 弹出层 -->
+<van-popup
+  show="{{ showPicker }}"
+  position="bottom"
+  round
+  bind:close="onCancel"
+  close-on-click-overlay="{{ false }}"  
+>
+
+ <!-- 时间选择器弹窗 -->
+ <van-datetime-picker
+  type="datetime"
+  title="选择时间"
+  value="{{ currentDate }}"
+  show-toolbar
+  bind:confirm="onConfirm"
+  bind:cancel="onCancel"
+  min-date="{{ 0 }}"  
+  max-date="{{ maxDate }}"
+/>
+</van-popup>
+
+    <van-cell title="结束时间" value="内容" is-link value="请选择结束时间" />
+    <van-cell>
+      <view slot="title" class="van-cell1111-1">
+        <text>报备数量</text>
+        <van-stepper value="{{ quantity }}" bind:change="onChange" />
+      </view>
+    </van-cell>
+    <van-cell title="所属人" value="内容" is-link value="请选择所属人" />
+    <van-cell title="老板" value="请填写老板" />
+    <van-cell>
+      <view slot="title" class="van-cell1111-1">
+        <view class="qunliao">
+          <text>所在群聊</text>
+          <view class="qunliao-1">
+            <view class="qunliao-1-icon">
+              <van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png" />选择群聊
+            </view>
+          </view>
+        </view>
+        <text class="qunliao-1-icon-01">请选择或填写群聊</text>
+      </view>
+    </van-cell>
+    <van-cell title="备注" value="请填写备注" />
+    <van-cell title="存单" value="点击使用存单" is-link />
+    <van-cell title="预存" value="点击选择预存老板" is-link />
+  </van-cell-group>
+ 
+</view>
+
+<view class="van-cell1111">
+  <van-cell-group inset>
+    <van-cell title="截图" />
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+  </van-cell-group>
+</view>
+
+<view class="van-cell1111">
+  <van-cell-group inset>
+    <van-cell title="账单" />
+    <view class="zhangdan">
+      <view class="view11">
+        <text>632</text>
+        <text>总金额</text>
+      </view>
+      <view class="view11"><text>158</text>
+        <text>折算单量</text>
+      </view>
+
+      <view class="view11"><text>316</text>
+        <text>抽成</text>
+      </view>
+
+      <view class="view11"><text>158</text>
+        <view class="view22">返点
+          <van-icon name="question-o" />
+        </view>
+      </view>
+
+    </view>
+    <view class="baobei">
+      <text>本次报备需要消耗<text class="jifen"> 316 </text>积分</text>
+      <text>您当前剩余<text class="jifen"> 20101.00 </text>积分</text>
+    </view>
+  </van-cell-group>
+</view>
+
+<view class="xinxi">提交报备</view>
+<view class="footer"></view>
